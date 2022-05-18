@@ -1,0 +1,13 @@
+﻿  rs-hello-realsense.cpp
+C:\Program Files (x86)\Intel RealSense SDK 2.0\include\librealsense2\h\rs_option.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+F:\workspace_research\ConerRadar\ConerRadar\rs-hello-realsense.cpp(89,64): warning C4305: “参数”: 从“double”到“float”截断
+F:\workspace_research\ConerRadar\ConerRadar\rs-hello-realsense.cpp(32,20): warning C4996: 'cv::dnn::dnn4_v20211220::DetectionModel::DetectionModel': 被声明为已否决
+  正在生成代码
+  1 of 645 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  ConerRadar.vcxproj -> F:\workspace_research\ConerRadar\x64\Release\ConerRadar.exe
+  Copy Intel RealSense SDK 2.0 shared module next to the application
+  C:\Program Files (x86)\Intel RealSense SDK 2.0\bin\x64\realsense2.dll
+  复制了 1 个文件
