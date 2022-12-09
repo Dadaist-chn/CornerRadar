@@ -32,26 +32,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -92,8 +92,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>D:\visp-ws\opencv-4.5.5\build\include;C:\Program Files (x86)\Intel RealSense SDK 2.0\samples;C:\Program Files (x86)\Intel RealSense SDK 2.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files (x86)\Intel RealSense SDK 2.0\lib\x86;C:\Program Files (x86)\Intel RealSense SDK 2.0\lib\x64;D:\visp-ws\opencv-4.5.5\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\admin\Downloads\opencv\build\include;C:\Users\admin\Downloads\opencv\build\x64\vc15\lib;C:\Program Files (x86)\Intel RealSense SDK 2.0\samples;C:\Program Files (x86)\Intel RealSense SDK 2.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Intel RealSense SDK 2.0\lib\x86;C:\Program Files (x86)\Intel RealSense SDK 2.0\lib\x64;C:\Users\admin\Downloads\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -144,16 +144,19 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\visp-ws\opencv-4.5.5\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\admin\Downloads\opencv\build\include\opencv2;C:\Users\admin\Downloads\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\visp-ws\opencv-4.5.5\build\x64\vc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_imgcodecs455.lib;opencv_calib3d455d.lib;opencv_core455.lib;opencv_core455d.lib;opencv_dnn455.lib;opencv_dnn455d.lib;opencv_features2d455.lib;opencv_features2d455d.lib;opencv_flann455.lib;opencv_flann455d.lib;opencv_gapi455.lib;opencv_gapi455d.lib;opencv_highgui455.lib;opencv_highgui455d.lib;opencv_imgcodecs455d.lib;opencv_imgproc455.lib;opencv_imgproc455d.lib;opencv_ml455.lib;opencv_ml455d.lib;opencv_objdetect455.lib;opencv_objdetect455d.lib;opencv_photo455.lib;opencv_photo455d.lib;opencv_stitching455.lib;opencv_stitching455d.lib;opencv_video455.lib;opencv_video455d.lib;opencv_videoio455.lib;opencv_videoio455d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\admin\Downloads\opencv\build\x64\vc15\bin;C:\Users\admin\Downloads\opencv\build\x64\vc14\lib;C:\Users\admin\Downloads\opencv\build\x64\vc14\bin;C:\Users\admin\Downloads\opencv\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world460.lib;realsense2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "C:\Program Files (x86)\Intel RealSense SDK 2.0\bin\$(PlatformShortName)\realsense2.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
